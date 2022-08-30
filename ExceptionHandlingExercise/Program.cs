@@ -36,9 +36,11 @@ namespace ExceptionHandlingExercise
                     var number = int.Parse(str);
                     numbers.Add(number);
                 }
-                catch
+                catch (Exception ex)
                 {
-                    Console.WriteLine($"Unable to Parse '{item}'");
+                    Console.WriteLine(ex.GetType());
+                    Console.WriteLine(ex.Message); Console.WriteLine();
+                    Console.WriteLine($"Unable to Parse '{item}'"); Console.WriteLine();
                 };
             }
             
